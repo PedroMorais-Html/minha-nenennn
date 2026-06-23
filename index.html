@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catas — Portfólio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <span class="nav-marca">Cartas</span>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#galeria">Galeria</a></li>
+      <li><a href="#catas">Catas</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <header id="sobre">
+    <div class="foto-perfil" id="foto-perfil">
+      <div class="anel"></div>
+      <div class="miolo">
+        <img src="" alt="Foto de perfil" id="foto-perfil-img">
+        <div class="icone-camera" id="icone-camera">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M4 7h3l1.5-2h7L17 7h3a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1z"/>
+            <circle cx="12" cy="13" r="3.5"/>
+          </svg>
+          <span>sua foto</span>
+        </div>
+      </div>
+      <div class="editar-marca">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+      </div>
+    </div>
+    <input type="file" id="input-foto-perfil" accept="image/*" style="display:none">
+
+    <p class="eyebrow">portfólio</p>
+    <h1 contenteditable="true" id="titulo">Catas</h1>
+    <p class="subtitulo" contenteditable="true" id="bio">Clique para escrever uma breve descrição sobre você ou o seu trabalho.</p>
+  </header>
+
+  <!-- ================= SEÇÃO: GALERIA ================= -->
+  <div class="acoes">
+    <label class="botao principal" for="input-arquivo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+      Adicionar imagens
+    </label>
+    <input type="file" id="input-arquivo" accept="image/*" multiple>
+  </div>
+
+  <div class="galeria" id="galeria"></div>
+
+  <!-- ================= SEÇÃO: CATAS ================= -->
+  <div class="titulo-secao" id="catas">
+    <h2>Seção <em>Catas</em></h2>
+    <p>Suas imagens e descrições de catas, organizadas aqui.</p>
+  </div>
+
+  <div class="acoes">
+    <label class="botao principal" for="input-arquivo-catas">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+      Adicionar imagens
+    </label>
+    <input type="file" id="input-arquivo-catas" accept="image/*" multiple>
+  </div>
+
+  <div class="galeria" id="galeria-catas"></div>
+
+  <footer id="contato">feito com carinho ✿</footer>
+</div>
+
+<template id="modelo-cartao">
+  <div class="cartao">
+    <div class="img-area">
+      <button class="remover" title="remover">✕</button>
+      <img src="" alt="">
+      <div class="descricao-faixa">
+        <b class="faixa-titulo"></b>
+        <span class="faixa-texto"></span>
+      </div>
+    </div>
+    <div class="legenda-edicao">
+      <input type="text" class="campo-titulo" placeholder="Título da imagem">
+      <textarea class="campo-texto" placeholder="Escreva uma descrição..."></textarea>
+    </div>
+  </div>
+</template>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
